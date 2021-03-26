@@ -1,0 +1,138 @@
+.mobile-menu__open {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  list-style: none;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.mobile-menu__icon--open {
+  fill: currentColor;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 48px 40px;
+  background-color: var(--bg-color);
+
+  transform: translateX(100%);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu__close {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  position: absolute;
+  border: none;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  list-style: none;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.mobile-menu__icon--close {
+  fill: currentColor;
+}
+
+.mobile-menu__text {
+  padding: 0;
+  margin: 0;
+  color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.mobile-menu__text--down {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.modal-menu__soc-links {
+  display: flex;
+}
+
+.modal-menu__soc-links-item {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+}
+
+.modal-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+}
+
+.mobile-menu__phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+  margin-bottom: 32px;
+}
+
+.mobile-menu__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.mobile-menu__item--current {
+  color: var(--accent-text-color);
+}
