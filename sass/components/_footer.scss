@@ -10,6 +10,7 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    text-align: left;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -125,7 +126,8 @@
 
 .mailing {
   position: relative;
-  width: 450px;
+  max-width: 450px;
+  min-width: 320px;
 
   @media screen and (min-width: 1200px) {
     margin-right: 12px;

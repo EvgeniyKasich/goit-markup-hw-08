@@ -70,6 +70,7 @@ a {
 
 .header {
   background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-header-color);
 }
 
 .header .container {
@@ -775,6 +776,12 @@ a {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .project-list__item {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .project-list__item {
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
@@ -902,6 +909,7 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    text-align: left;
   }
 }
 
@@ -1045,7 +1053,8 @@ a {
 
 .mailing {
   position: relative;
-  width: 450px;
+  max-width: 450px;
+  min-width: 320px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1439,6 +1448,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
