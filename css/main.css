@@ -289,7 +289,8 @@ a {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__img {
-    background-image: url("../images/header-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header-mobile@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-mobile@2x.jpg");
   }
 }
 
@@ -304,7 +305,8 @@ a {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero__img {
-    background-image: url("../images/tablet@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet@2x.jpg");
   }
 }
 
@@ -321,7 +323,8 @@ a {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__img {
-    background-image: url("../images/desctop@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desctop@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desctop@2x.jpg");
   }
 }
 
@@ -1163,7 +1166,6 @@ a {
   padding: 40px 40px;
   max-width: 528px;
   width: 100%;
-  min-height: 581px;
   max-height: 100vh;
   overflow-y: auto;
   background: var(--white-text-color);
@@ -1531,12 +1533,20 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .modal-menu__soc-links-item {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
+}
+
+@media screen and (max-width: 460px) {
+  .modal-menu__soc-links-item {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-menu__social-link {
@@ -1554,6 +1564,12 @@ a {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 376px) {
+  .mobile-menu__phone {
+    font-size: 26px;
+  }
 }
 
 .mobile-menu__mail {

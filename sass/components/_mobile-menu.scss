@@ -101,12 +101,17 @@
 
 .modal-menu__soc-links {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .modal-menu__soc-links-item {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   margin-right: 10px;
+
+  @media screen and (max-width: 460px) {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-menu__social-link {
@@ -124,6 +129,10 @@
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
   margin-bottom: 32px;
+
+  @media screen and (max-width: 376px) {
+    font-size: 26px;
+  }
 }
 
 .mobile-menu__mail {
